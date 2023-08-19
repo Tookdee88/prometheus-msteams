@@ -29,5 +29,4 @@ spec:
     {{- toYaml .Values.service.externalIPs | nindent 4 }}
   {{- end }}
   selector:
-    app: {{ template "app.name" . }}
-    release: {{ .Release.Name }}
+    {{- include "app.selectorLabels" . | nindent 4 }}
