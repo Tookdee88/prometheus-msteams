@@ -70,6 +70,15 @@ extraVolumeMounts: []
 #   - name: volume-name
 #     mountPath: /etc/custom_path
 
+## Volume mount for connectors.yaml config file
+## This will replace default config volume mount
+connectorsVolumeMount:
+# csi:
+#   driver: secrets-store.csi.k8s.io
+#   readOnly: true
+#   volumeAttributes:
+#     secretProviderClass: "prometheus-msteams-secrets"
+
 connectors: []
 
 # ref: https://github.com/prometheus-msteams/prometheus-msteams#customise-messages-per-ms-teams-channel
